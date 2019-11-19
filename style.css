@@ -1,0 +1,19 @@
+/* .container {
+    border: 1px solid red
+}
+
+.row {
+    border: 1px solid blue
+} */
+
+.shown-clue {
+    color: green
+}
+
+.blurred {
+    filter: blur(3rem)
+}
+
+.hidden {
+    display: hidden
+}

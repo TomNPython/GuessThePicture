@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <h1 >Guess The Picture</h1>
+            <p>Click 'Start' to begin. A blurred picture will appear on the left. If 
+                you think you know what it is, write your answer in the 'Guess' box. If you
+                need more help, click 'Give me a hint!' for a clue about the picture.
+            </p>
+                <p>
+                    <span id='score'>Score</span>
+                    <span id='timer'>Timer</span>
+                    <button id='start'>Start</button>
+                </p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p id='answer-image'>Image</p>
+                <p id='answer-name'>Name</p>
+            </div>
+            <div class="col-md-6">
+                <button id='clue-button'>Give me a hint!</button>
+                <ul id='clue-list'>Clues</ul>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <form id='guess'>
+        <input id='guessed-answer' type="text" placeholder='Guess!'>
+        <button type='submit'>I think...</button>
+        </form>
+        <div id='wrong-guesses'></div>
+    </div>
+    <script src='scripts.js'></script>
+</body>
+</html>
