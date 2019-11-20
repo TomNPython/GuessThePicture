@@ -1,19 +1,49 @@
-/* .container {
-    border: 1px solid red
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80');
+    background-size: 100%;
+    color: white
 }
 
 .row {
-    border: 1px solid blue
-} */
+    margin: 10px
+}
 
-.shown-clue {
-    color: green
+h1 {
+    padding: 10px
+}
+
+p, #clue-list {
+    font-size: 20px
+}
+
+
+#guessed-answer {
+    color: white;
 }
 
 .blurred {
-    filter: blur(3rem)
+    filter: blur(1.5rem);
 }
 
 .hidden {
     display: hidden
 }
+
+#start, #clue-button, button, input {
+    font-size: 24px;
+    margin: 10px;
+    padding: 10px 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: inherit
+}
+
+#start:hover, #clue-button:hover, button:hover {
+    transform: scale(1.1)
+}
+
+#answer-image {
+    justify-content: center;
+    text-align: center;
+}
+

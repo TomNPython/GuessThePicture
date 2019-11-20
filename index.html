@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name='description' content='game where the user guesses a blurred image from clues'>
+    <title>Guess The Picture!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
     crossorigin="anonymous">
@@ -19,19 +20,20 @@
                 need more help, click 'Give me a hint!' for a clue about the picture.
             </p>
                 <p>
-                    <span id='score'>Score</span>
-                    <span id='timer'>Timer</span>
-                    <button id='start'>Start</button>
+                    <span id='score' class='float-left'>Score: </span>
+                    <span id='timer' class='float-right'>Timer: </span>
+                    <br/>
+                    <button id='start'  >Start</button>
                 </p>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <p id='answer-image'>Image</p>
-                <p id='answer-name'>Name</p>
+                <p id='answer-image'></p>
+                <p id='answer-name'></p>
             </div>
             <div class="col-md-6">
                 <button id='clue-button'>Give me a hint!</button>
-                <ul id='clue-list'>Clues</ul>
+                <ul id='clue-list'></ul>
             </div>
         </div>
     </div>

@@ -39,7 +39,7 @@ const start = document.getElementById('start');
 const clueButton = document.getElementById('clue-button');
 const clueList = document.getElementById('clue-list');
 const guess = document.getElementById('guess')
-const wrongGuesses = document.getElementById('wrong-guesses')
+const wrongGuesses = document.getElementById('wrong-guesses');
 
 
 //Scripts
@@ -47,6 +47,7 @@ const wrongGuesses = document.getElementById('wrong-guesses')
 function startGame() {
     resetGame()
     let randInt = Math.floor((Math.random()) * gameInfo.length)
+    start.innerHTML = 'Change picture?'
     
     let picture = document.createElement('img')
     picture.src = gameInfo[randInt].imageLink;
@@ -102,8 +103,10 @@ function guessAnswer(e) {
     
     if (guessedAnswer.toLowerCase() == correctAnswer.toLowerCase()) {
         let congrats = document.createElement('h1');
-        wrongGuesses.innerHTML = ''
-        congrats.innerHTML = 'Congratulations!'
+        wrongGuesses.innerHTML = '';
+        congrats.innerHTML = 'Congratulations!';
+        start.innerHTML = 'Try another?';
+
         wrongGuesses.appendChild(congrats)
         image[0].classList.remove('blurred')
     } else {
