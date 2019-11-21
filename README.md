@@ -3,5 +3,8 @@
 
 ToDo:
 - ~formatting and styling~
-- add score and timer
-- add reset/giveup buttons
+- ~add score~
+- ~add change button~
+- add give up button
+- track score across multiple images
+- use local asset images

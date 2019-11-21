@@ -34,7 +34,6 @@ const gameInfo = [
 const answerImage = document.getElementById('answer-image');
 const answerName = document.getElementById('answer-name');
 const score = document.getElementById('score');
-const timer = document.getElementById('timer');
 const start = document.getElementById('start');
 const clueButton = document.getElementById('clue-button');
 const clueList = document.getElementById('clue-list');
@@ -45,7 +44,10 @@ const wrongGuesses = document.getElementById('wrong-guesses');
 //Scripts
 
 function startGame() {
-    resetGame()
+    if (answerImage.children.length) {
+        resetGame()
+            }
+
     let randInt = Math.floor((Math.random()) * gameInfo.length)
     start.innerHTML = 'Change picture?'
     
@@ -82,7 +84,8 @@ function giveClue(){
         let listOfClues = Array.from(document.getElementsByClassName('clue'));
         console.log(document.getElementsByClassName('clue'))
         if (index < listOfClues.length) {
-        listOfClues[index].classList.remove('hidden')
+        listOfClues[index].classList.remove('hidden');
+        listOfClues[index].classList.add('shown');
         console.log(listOfClues)
         index++
         console.log(index)
@@ -106,6 +109,7 @@ function guessAnswer(e) {
         wrongGuesses.innerHTML = '';
         congrats.innerHTML = 'Congratulations!';
         start.innerHTML = 'Try another?';
+        setScore()
 
         wrongGuesses.appendChild(congrats)
         image[0].classList.remove('blurred')
@@ -121,9 +125,26 @@ function resetGame() {
     answerImage.innerHTML = '';
     clueList.innerHTML = '';
     wrongGuesses.innerHTML = '';
-    index = 0
-
+    index = 0;
+    score.innerHTML = 'Score: 0'
 }
+
+function setScore() {
+    let points = 0
+    let shownClues = document.getElementsByClassName('shown')
+    if (shownClues.length == 0) {
+        points += 5
+    } else if (shownClues.length < 3) {
+        points += 3
+    } else if (shownClues.length >= 3) {
+        points += 1
+    }
+    score.innerHTML = `Score: ${points}`
+    //LATER: adapt to track score across multiple images
+}
+
+// give up function - on click of button reveal blurred image and 
+// show answer at bottom of screen
 
 
 
