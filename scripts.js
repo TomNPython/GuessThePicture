@@ -39,6 +39,8 @@ const clueButton = document.getElementById('clue-button');
 const clueList = document.getElementById('clue-list');
 const guess = document.getElementById('guess')
 const wrongGuesses = document.getElementById('wrong-guesses');
+const giveUp = document.getElementById('give-up');
+let index = 0
 
 
 //Scripts
@@ -49,7 +51,8 @@ function startGame() {
             }
 
     let randInt = Math.floor((Math.random()) * gameInfo.length)
-    start.innerHTML = 'Change picture?'
+    start.innerHTML = 'Change picture?';
+    giveUp.classList.remove('hidden')
     
     let picture = document.createElement('img')
     picture.src = gameInfo[randInt].imageLink;
@@ -74,8 +77,6 @@ function startGame() {
     name.classList.add('correct-answer')
     answerName.appendChild(name)
 }
-
-let index = 0
 
 function giveClue(){
     console.log(index)
@@ -129,6 +130,7 @@ function resetGame() {
     score.innerHTML = 'Score: 0'
 }
 
+
 function setScore() {
     let points = 0
     let shownClues = document.getElementsByClassName('shown')
@@ -141,14 +143,22 @@ function setScore() {
     }
     score.innerHTML = `Score: ${points}`
     //LATER: adapt to track score across multiple images
+};
+
+function stopPlaying() {
+    let image = Array.from(document.getElementsByClassName('blurred'));
+    if (image.length) {
+    image[0].classList.remove('blurred');
+    score.innerHTML = `Score: 0`
+    }
 }
 
 // give up function - on click of button reveal blurred image and 
 // show answer at bottom of screen
 
 
-
 // Event Listeners
 start.addEventListener('click', startGame)
 clueButton.addEventListener('click', giveClue)
 guess.addEventListener('submit', guessAnswer)
+giveUp.addEventListener('click', stopPlaying)
