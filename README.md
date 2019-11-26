@@ -6,7 +6,7 @@ View online at tomnpython.github.io/GuessThePicture
 ToDo:
 - ~formatting and styling~
 - ~add score~
-- ~add change button~
+- ~add change picture button~
 - ~add give up button~
 - track score across multiple images
 - use local asset images

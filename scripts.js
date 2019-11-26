@@ -108,16 +108,18 @@ function guessAnswer(e) {
     if (guessedAnswer.toLowerCase() == correctAnswer.toLowerCase()) {
         let congrats = document.createElement('h1');
         wrongGuesses.innerHTML = '';
-        congrats.innerHTML = 'Congratulations!';
+        congrats.innerHTML = `You got it! It's a ${guessedAnswer}!`;
         start.innerHTML = 'Try another?';
         setScore()
 
         wrongGuesses.appendChild(congrats)
         image[0].classList.remove('blurred')
+        guessedAnswer.value = ''
     } else {
         let commis = document.createElement('h1');
         commis.innerHTML = `Nope, not '${guessedAnswer}'. Try Again!`;
-        wrongGuesses.appendChild(commis)
+        wrongGuesses.appendChild(commis);
+        guessedAnswer = ''
     }
 }
 
@@ -147,8 +149,10 @@ function setScore() {
 
 function stopPlaying() {
     let image = Array.from(document.getElementsByClassName('blurred'));
+    let secrets = Array.from(document.getElementsByClassName('hidden'))
     if (image.length) {
     image[0].classList.remove('blurred');
+    secrets.forEach(secret => secret.classList.remove('hidden'))
     score.innerHTML = `Score: 0`
     }
 }

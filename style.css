@@ -47,3 +47,12 @@ p, #clue-list {
     text-align: center;
 }
 
+#answer-image img {
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+#answer-name {
+    text-align: center
+}
+
