@@ -10,3 +10,4 @@ ToDo:
 - ~add give up button~
 - track score across multiple images
 - use local asset images
+- add answer name on 'give up' and 'congratulations'
