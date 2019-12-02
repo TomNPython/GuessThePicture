@@ -12,17 +12,17 @@
 // Game Answers
 const gameInfo = [
     {
-        imageLink: 'https://images.pexels.com/photos/2103946/pexels-photo-2103946.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        imageLink: './imgs/coconut.jpeg',
         answer: 'Coconut',
         clues: ['It has hair.', 'It is white inside', 'It has water inside.']
     },
     {
-        imageLink: 'https://images.pexels.com/photos/2267338/pexels-photo-2267338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        imageLink: './imgs/flag.jpeg',
         answer: 'Flag',
         clues: ['You can wave it.', 'Every country has one.', 'It can have many colours.']
     },
     {
-        imageLink: 'https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        imageLink: './imgs/beach.jpeg',
         answer: 'Beach',
         clues: ['You can swim near it.', 'It can be yellow or white.', 'You can play games at it.']
     }
