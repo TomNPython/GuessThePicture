@@ -41,6 +41,7 @@ const guess = document.getElementById('guess')
 const wrongGuesses = document.getElementById('wrong-guesses');
 const giveUp = document.getElementById('give-up');
 let index = 0
+let points = 0
 
 
 //Scripts
@@ -129,12 +130,11 @@ function resetGame() {
     clueList.innerHTML = '';
     wrongGuesses.innerHTML = '';
     index = 0;
-    score.innerHTML = 'Score: 0'
+    score.innerHTML = `Score: ${points}`
 }
 
 
 function setScore() {
-    let points = 0
     let shownClues = document.getElementsByClassName('shown')
     if (shownClues.length == 0) {
         points += 5
@@ -153,7 +153,7 @@ function stopPlaying() {
     if (image.length) {
     image[0].classList.remove('blurred');
     secrets.forEach(secret => secret.classList.remove('hidden'))
-    score.innerHTML = `Score: 0`
+    score.innerHTML = `Score: ${points}`
     }
 }
 
