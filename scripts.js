@@ -25,6 +25,16 @@ const gameInfo = [
         imageLink: './imgs/beach.jpeg',
         answer: 'Beach',
         clues: ['You can swim near it.', 'It can be yellow or white.', 'You can play games at it.']
+    }, 
+    {
+        imageLink: './imgs/feather.jpg',
+        answer: 'Feather',
+        clues: ['It tickles.', 'Birds have them.', 'They come in many colours.']
+    }, 
+    {
+        imageLink: './imgs/dog.jpg',
+        answer: 'Dog',
+        clues: ['Its furry.', 'Its cute.', 'It likes to play fetch.']
     }
 ]
 
@@ -144,7 +154,6 @@ function setScore() {
         points += 1
     }
     score.innerHTML = `Score: ${points}`
-    //LATER: adapt to track score across multiple images
 };
 
 function stopPlaying() {
